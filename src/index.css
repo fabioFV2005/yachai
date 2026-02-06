@@ -1,1 +1,15 @@
+:root {
+    /* main colors */
+    --blue-petroleum: #003B5C;
+    --light-sky-blue: #A7C7E7;
+
+    /* secondary colors */
+    --pearl-gray: #EAECEF;
+    --soft-blue: #4A90E2;
+
+    /* neutral colors */
+    --off-white: #FAFAFA;
+    --medium-gray: #6B7280;
+}
+
 @import "tailwindcss";
