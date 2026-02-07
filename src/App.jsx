@@ -1,7 +1,10 @@
 import React from 'react'
-
-export const App = () => {
+import { CustomHeader } from './shared/custom/CustomHeader'
+import { RouterProvider } from 'react-router'
+import { appRouter } from "./router/app.router"
+const App = () => {
   return (
-    <div className='text-amber-50'>App</div>
+    <RouterProvider router={appRouter} />
   )
 }
+export default App
