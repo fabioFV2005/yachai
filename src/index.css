@@ -13,3 +13,91 @@
 }
 
 @import "tailwindcss";
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+p,
+a,
+li {
+    font-family: "Oswald", sans-serif;
+}
+
+
+.text-blue {
+    color: var(--soft-blue);
+
+}
+
+/* custom css */
+.background-image-hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.background-image-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px);
+    scale: 1.05;
+    z-index: -2;
+}
+
+.background-image-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 59, 92, 0.9), rgba(0, 59, 92, 0.8), rgba(0, 59, 92, 0.7));
+    z-index: -1;
+}
+
+.background-color {
+    background-color: var(--off-white);
+}
+
+.button {
+    color: var(--off-white);
+    padding: 0.75rem 2rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--blue-petroleum), var(--soft-blue), var(--blue-petroleum));
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    transition: background-position 0.6s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.button:hover {
+    background-position: 100% 50%;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 59, 92, 0.3);
+}
+
+
+
+.custom-link,
+.custom-link__visited {
+    color: var(--off-white);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.custom-link__visited {
+    /* background-color: #f3f4f6; */
+    border-radius: 5px;
+    padding: 2px 6px;
+    color: var(--off-white);
+    text-decoration: none;
+    font-weight: 500;
+}
