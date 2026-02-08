@@ -27,10 +27,17 @@ li {
     font-family: "Oswald", sans-serif;
 }
 
+.background-white {
+    background-color: var(--off-white);
+}
 
 .text-blue {
-    color: var(--soft-blue);
+    color: var(--light-sky-blue);
 
+}
+
+.text-blue-petroleum {
+    color: var(--blue-petroleum);
 }
 
 /* custom css */

@@ -1,37 +1,63 @@
-import example from "../../../assets/hero/example.jpg"
+import { Hero } from "../../../shared/components/home/Hero"
+import { Card } from "../../../shared/components/cards/Card"
+import confundida from "../../../assets/problems/confundida.avif"
+import manual from "../../../assets/problems/manual.avif"
+import negocios from "../../../assets/problems/negocios.webp"
+
 export const HomePage = () => {
+    const problems = [
+        {
+            image: manual,
+            title: "Procesos lentos y manuales",
+            description: "Las tareas repetitivas consumen tiempo valioso que podría dedicarse a crecer el negocio."
+        },
+        {
+            image: negocios,
+            title: "Falta de accesibilidad tecnológica",
+            description: "Herramientas complejas que dificultan la adopción y el uso efectivo de la tecnología."
+        },
+        {
+            image: confundida,
+            title: "Soluciones poco intuitivas",
+            description: "Sistemas difíciles de entender que generan frustración y baja productividad."
+        }
+    ]
+
     return (
-        <section className="flex flex-col mt-14">
-            <div className="grid grid-cols-2 items-center justify-between px-96 py-8 ">
-                <div className="flex flex-col">
-                    <p className="w-fit h-fit text-lg  text-white px-6 py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-full shadow-lg mb-6">
-                        {"< "} Empresa desarrolladora de software {" />"}
-                    </p>
+        <>
+            <Hero />
+            <section className="background-white px-8 min-h-screen">
+                <div className="container mx-auto max-w-7xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-5xl font-bold text-blue-petroleum mb-6">
+                            ¿Qué problema resolvemos?
+                        </h2>
+                        <p className="text-xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
+                            Identificamos los desafíos más comunes en la transformación digital y ofrecemos soluciones simples, rápidas y accesibles.
+                        </p>
+                    </div>
 
-                    <h1 className="text-5xl text-white mb-8 w-fit h-fit font-bold">
-                        Escale de forma
-                        <br />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        {problems.map((problem, index) => (
+                            <Card
+                                key={index}
+                                image={problem.image}
+                                title={problem.title}
+                                description={problem.description}
+                            />
+                        ))}
+                    </div>
 
-                        <span className="text-6xl text-gradient font-bold text-blue ">
-                            más
-                            inteligente
-                        </span>
-                        <br />
-                        con talento
-                        en ingeniería </h1>
-                    <p className="text-lg text-white mb-8 w-fit h-fit">
-                        Software basado en la confianza y colaboración. <br /> Transformamos ideas en soluciones digitales innovadoras.
-                    </p>
-
+                    <div className="text-center mt-12">
+                        <div className="inline-block px-8 py-4  rounded-full">
+                            <p className="text-black text-xl font-semibold ">
+                                Nosotros lo hacemos simple, rápido y accesible
+                            </p>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <img className="w-xl rounded-3xl m-auto" src={example} alt="image team" />
-
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 z-10">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FAFAFA" fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,192C320,171,400,117,480,128C560,139,640,213,720,234.7C800,256,880,224,960,208C1040,192,1120,192,1200,192C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-            </div>
-
-        </section>
+        </>
     )
 }
