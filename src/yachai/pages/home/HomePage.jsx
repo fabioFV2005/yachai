@@ -49,8 +49,8 @@ export const HomePage = () => {
                     </div>
 
                     <div className="text-center mt-12">
-                        <div className="inline-block px-8 py-4  rounded-full">
-                            <p className="text-black text-xl font-semibold ">
+                        <div className="inline-block px-8 py-2  rounded-full">
+                            <p className="text-soft-blue text-xl font-semibold ">
                                 Nosotros lo hacemos simple, rápido y accesible
                             </p>
                         </div>

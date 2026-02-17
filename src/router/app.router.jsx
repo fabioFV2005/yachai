@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import { ClientLayout } from "../yachai/layouts/ClientLayout";
 import { HomePage } from "../yachai/pages/home/HomePage";
 import { About } from "../yachai/pages/about/About";
 import { CustomError } from "../shared/custom/CustomError"
+import { Contact } from "../yachai/pages/Contact/Contact";
 export const appRouter = createBrowserRouter([
     {
         path: "/",
@@ -18,8 +19,12 @@ export const appRouter = createBrowserRouter([
                 element: <About />
             },
             {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
                 path: "*",
-                element: <HomePage />
+                element: <Navigate to="/" />
             }
         ]
     },

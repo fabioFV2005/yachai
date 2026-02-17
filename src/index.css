@@ -36,6 +36,14 @@ li {
 
 }
 
+.bg-blue-petroleum {
+    background-color: var(--blue-petroleum);
+}
+
+.text-soft-blue {
+    color: var(--soft-blue);
+}
+
 .text-blue-petroleum {
     color: var(--blue-petroleum);
 }
