@@ -64,7 +64,7 @@ export const Form = () => {
                         className="w-full px-4 py-3 bg-off-white border-2 border-pearl-gray rounded-xl 
                                  focus:outline-none focus:border-soft-blue focus:ring-2 focus:ring-soft-blue/20
                                  transition-all duration-300 text-gray-700 placeholder-gray-400"
-                        placeholder="+51 999 999 999"
+                        placeholder="+591 12345678"
                     />
                 </div>
 
@@ -83,7 +83,7 @@ export const Form = () => {
                         className="w-full px-4 py-3 bg-off-white border-2 border-pearl-gray rounded-xl 
                                  focus:outline-none focus:border-soft-blue focus:ring-2 focus:ring-soft-blue/20
                                  transition-all duration-300 text-gray-700 placeholder-gray-400"
-                        placeholder="tucorreo@ejemplo.com"
+                        placeholder="usuario@gmail.com"
                     />
                 </div>
                 <div className="relative">
