@@ -1,32 +1,31 @@
 import example from "../../../assets/hero/example.jpg"
-// podremos implementar futuras props para hacer el componente más dinámico
 export const Hero = () => {
     return (
-        <section className="background-image-hero flex flex-col relative pt-20">
-            <div className="grid grid-cols-2 items-center justify-between px-96 py-8 gap-9 ">
+        <section className="background-image-hero flex flex-col relative pt-16 md:pt-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 2xl:px-96 py-8 gap-6 md:gap-9">
                 <div className="flex flex-col">
-                    <p className="w-fit h-fit text-lg text-white px-6 py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-full shadow-lg mb-6">
+                    <p className="w-fit h-fit text-sm md:text-base lg:text-lg text-white px-4 md:px-6 py-2 md:py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-full shadow-lg mb-4 md:mb-6">
                         {"< "} Desarrollo de Software {" />"}
                     </p>
 
-                    <h1 className="text-5xl text-white mb-8 w-fit h-fit font-bold leading-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl text-white mb-6 md:mb-8 w-fit h-fit font-bold leading-tight">
                         Escale su negocio de forma
                         <br />
-                        <span className="text-6xl font-extrabold text-blue">
+                        <span className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue">
                             más inteligente
                         </span>
                         <br />
                         con talento en ingeniería de software
                     </h1>
 
-                    <p className="text-xl text-white/90 mb-8 w-fit h-fit max-w-xl leading-relaxed">
+                    <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 w-fit h-fit max-w-xl leading-relaxed">
                         Transformamos sus ideas en soluciones digitales innovadoras.
                         Desarrollo basado en confianza, colaboración y excelencia técnica.
                     </p>
 
                 </div>
 
-                <img className="w-xl rounded-3xl m-auto" src={example} alt="image team" />
+                <img className="w-full max-w-md lg:max-w-xl rounded-3xl mx-auto" src={example} alt="image team" />
 
             </div>
             <div className="absolute bottom-0 left-0 right-0 -mb-1">
